@@ -5,7 +5,7 @@ class Ativo(models.Model):
     codigo = models.CharField(max_length=14, unique=True)
     limite_inferior = models.FloatField()
     limite_superior = models.FloatField()
-    periodicidade = models.IntegerField(help_text="Periodicidade em minutos")
+    periodicidade = models.IntegerField()
     
 def __str__(self):
     return f"Ativo: {self.nome}, Código: {self.codigo}"
