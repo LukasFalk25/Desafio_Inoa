@@ -6,6 +6,8 @@ class Ativo(models.Model):
     limite_inferior = models.FloatField()
     limite_superior = models.FloatField()
     periodicidade = models.IntegerField()
+    ultima_cotacao = models.FloatField(null=True, blank=True)
     
 def __str__(self):
     return f"Ativo: {self.nome}, Código: {self.codigo}"
+
